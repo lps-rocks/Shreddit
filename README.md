@@ -2,13 +2,25 @@
 
 Original repo and Readme.md [here](https://github.com/x89/Shreddit).
 
-# FAQ - Common Errors
+# FAQ - Common Error(s)
 
-1. *"Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-uV1OBB/arrow/"*
+1. `Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-uV1OBB/arrow/`
 
 Upgrade 'setuptools'
 
 `pip install --upgrade setuptools`
+
+2. `Command "python setup.py egg_info" failed with error code 1`
+
+You are missing a dependency. Try installing manually.
+
+3. `Invalid requirement: '<<<<<<< HEAD'`
+
+`Traceback (most recent call last):`
+
+`et cetera, et cetera`
+
+You are trying to install the original repo's broken code. Clone and install mine with the fixes.
 
 # Pre-install conditions:
 
