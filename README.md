@@ -1,20 +1,24 @@
 # Shreddit
 
-Shreddit is a Python command line program which will take a user's post history on the website
-[Reddit](http://reddit.com), and will systematically go through the user's history deleting one post/submission at a
-time until only those whitelisted remain. It allows you to maintain your normal reddit account while having your history
-scrubbed after a certain amount of time.
+Original repo and Readme.md [here](https://github.com/x89/Shreddit).
 
-When it became known that post edits were *not* saved but post deletions *were* saved, code was added to edit your post
-prior to deletion. In fact you can actually turn off deletion all together and just have lorem ipsum (or a message
-about Shreddit) but this will increase how long it takes the script to run as it will be going over all of your messages
-every run.
+# FAQ - Common Errors
 
-## Important New Changes (as of Dec 2016)
+1. *"Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-uV1OBB/arrow/"*
 
-Due to deprecation of the PRAW 3.x library, Shreddit is using PRAW 4. This requires that OAuth be used to authenticate.
-Thankfully, however, it is much easier than in previous versions. If you are upgrading, [please review the usage section
-to ensure that you have set up credentials correctly.](#configuring-credentials)
+Upgrade 'setuptools'
+
+`pip install --upgrade setuptools`
+
+# Pre-install conditions:
+
+Make sure you install pip
+
+`$ apt install python-pip`
+
+Then update pip with
+
+`$ pip install --updgrade pip`
 
 ## Pip Installation
 
@@ -124,22 +128,11 @@ optional arguments:
 
 ## For Windows users
 
+0. Get Linux. *No really...*
+
 1. Make sure you have Python installed.
    [Click here for the Python download page](https://www.python.org/downloads/).
         - **Note:** Install either `python 2.x` or `python 3.x`, not both.
 2. Follow the [pip installation](#pip-installation) instructions.
 3. Open a new command prompt and verify that the `shreddit` command works before moving on to the [usage](#usage)
    section.
-
-## Caveats
-
-- Certain limitations in the Reddit API and the PRAW library make it difficult to delete more than 1,000 comments.
-  While deleting >1000 comments is planned, it is necessary right now to rerun the program until they are all deleted.
-
-- We are relying on Reddit admin words that they do not store edits, deleted posts are still stored in the database
-  they are merely inaccessible to the public.
-
-## Donate
-
-A few people have asked about donating so here's a Bitcoin address, any amount is appreciated, spread amongst recent 
-contributors and if there's enough interest a web service may be on the horizon! `1PbeYK7FonjVmgWxf4ieKmvwtomZR1K1Qu`
