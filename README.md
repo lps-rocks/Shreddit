@@ -6,7 +6,7 @@ Original repo and Readme.md [here](https://github.com/x89/Shreddit).
 
 1.
 
-Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-uV1OBB/arrow/
+`<something> installed but version <something> is required.`
 
 Upgrade 'setuptools'
 
@@ -14,9 +14,9 @@ Upgrade 'setuptools'
 
 2.
 
-Command "python setup.py egg_info" failed with error code 1
+`Command "python setup.py egg_info" failed with error code 1`
 
-You are missing a dependency. Try installing manually.
+You are missing a dependency. Try installing using manual instructions below.
 
 3.
 
