@@ -40,15 +40,15 @@ Then update pip with
 
 ## Pip Installation
 
-`pip install -U shreddit` will install the package and its dependencies, and it will add a `shreddit` command line
+`$ pip install -U shreddit` will install the package and its dependencies, and it will add a `shreddit` command line
 utility to your PATH. This is typically either run in a virtualenv or using administrative privileges for global
 installation.
 
 ## Manual Installation
 
 1. Clone the `shreddit` repository to a directory.
-2. From the directory, run `pip install -r requirements.txt`
-3. Run `python setup.py install` to install the package and the `shreddit` command line utility.  This is typically
+2. From the directory, run `$ pip install -r requirements.txt`
+3. Run `$ python setup.py install` to install the package and the `shreddit` command line utility.  This is typically
    either run in a virtualenv or using administrative privileges for global installation.
 
 ## Usage
