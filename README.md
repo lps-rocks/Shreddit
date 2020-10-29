@@ -150,7 +150,7 @@ optional arguments:
 
 1. Make sure you have Python installed.
    [Click here for the Python download page](https://www.python.org/downloads/).
-        - **Note:** Install either `python 2.x` or `python 3.x`, not both.
+        - **Note:** Install `python 3.x`, not `2.x`.
 2. Follow the [pip installation](#pip-installation) instructions.
 3. Open a new command prompt and verify that the `shreddit` command works before moving on to the [usage](#usage)
    section.
