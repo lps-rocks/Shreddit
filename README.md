@@ -2,6 +2,12 @@
 
 Original repo and Readme.md [here](https://github.com/x89/Shreddit).
 
+# Donation and funding towards development and bugfixing of my fork
+
+### If you wish to support development and bugfixing of this script or any others I work on please consider a donation
+
+[![Donate via Paypal.me](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/djbp)
+
 # FAQ - Common Error(s)
 
 1. `<something> installed but version <something> is required.` - Upgrade 'setuptools' with `pip install --upgrade setuptools`
