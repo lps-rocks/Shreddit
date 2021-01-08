@@ -2,7 +2,7 @@
 
 Original repo and Readme.md [here](https://github.com/x89/Shreddit).
 
-# Donation and funding towards development and bugfixing of my fork
+# Donation
 
 ### If you wish to support development and bugfixing of this script or any others I work on please consider a donation
 
