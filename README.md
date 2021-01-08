@@ -4,29 +4,9 @@ Original repo and Readme.md [here](https://github.com/x89/Shreddit).
 
 # FAQ - Common Error(s)
 
-1.
-
-`<something> installed but version <something> is required.`
-
-Upgrade 'setuptools'
-
-`pip install --upgrade setuptools`
-
-2.
-
-`Command "python setup.py egg_info" failed with error code 1`
-
-You are missing a dependency. Try installing using manual instructions below.
-
-3.
-
-```
-Invalid requirement: '<<<<<<< HEAD'
-Traceback (most recent call last):
-et cetera, et cetera
-```
-
-You are trying to install the original repo's broken code. Clone and install mine with the fixes.
+1. `<something> installed but version <something> is required.` - Upgrade 'setuptools' with `pip install --upgrade setuptools`
+2. `Command "python setup.py egg_info" failed with error code 1` - You are missing a dependency. Try installing using manual instructions below.
+3. ` Invalid requirement: '<<<<<<< HEAD' Traceback (most recent call last): et cetera, et cetera1` - You are trying to install the original repo's broken code. Clone and install mine with the fixes.
 
 # Pre-install conditions:
 
@@ -38,15 +18,11 @@ Then update pip with
 
 `$ pip install --updgrade pip`
 
-## Pip Installation
-
-`$ pip install -U shreddit` will install the package and its dependencies, and it will add a `shreddit` command line
-utility to your PATH. This is typically either run in a virtualenv or using administrative privileges for global
-installation.
+Note: you can use pip or pip3 to match the version of Python you're using.
 
 ## Manual Installation
 
-1. Clone the `shreddit` repository to a directory.
+1. Clone the `shreddit` repository to a directory: `$ git clone https://github.com/pythonInRelay/Shreddit.git`
 2. From the directory, run `$ pip install -r requirements.txt`
 3. Run `$ python setup.py install` to install the package and the `shreddit` command line utility.  This is typically
    either run in a virtualenv or using administrative privileges for global installation.
