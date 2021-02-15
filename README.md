@@ -22,7 +22,7 @@ Make sure you install pip
 
 Then update pip with
 
-`$ pip install --updgrade pip`
+`$ pip install --upgrade pip`
 
 Note: you can use pip or pip3 to match the version of Python you're using.
 
