@@ -23,7 +23,7 @@ class Shredder(object):
         self._logger = logging.getLogger("shreddit")
         self._logger.setLevel(level=logging.DEBUG if config.get("verbose", True) else logging.INFO)
         self.__dict__.update({"_{}".format(k): config[k] for k in config})
-
+        
         self._user = user
         self._connect()
 
@@ -44,7 +44,7 @@ class Shredder(object):
                 self._whitelist.add(str(subreddit).lower())
 
         # Add any multireddit subreddits to the blacklist
-        self._blacklist = set()
+        self._blacklist = set([s.lower() for s in self._blacklist])
         for username, multiname in self._multi_blacklist:
             multireddit = self._r.multireddit(username, multiname)
             for subreddit in multireddit.subreddits:
