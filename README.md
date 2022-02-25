@@ -24,7 +24,7 @@ Then update pip with
 
 `$ python3 -m pip install --upgrade pip`
 
-Note: you can use pip or pip3 to match the version of Python you're using.
+Note: Python2 is now depreciated. Use python3.
 
 ## Manual Installation
 
