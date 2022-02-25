@@ -18,19 +18,19 @@ Original repo and Readme.md [here](https://github.com/x89/Shreddit).
 
 Make sure you install pip
 
-`$ apt install python-pip`
+`$ apt install python3-pip`
 
 Then update pip with
 
-`$ pip install --upgrade pip`
+`$ python3 -m pip install --upgrade pip`
 
 Note: you can use pip or pip3 to match the version of Python you're using.
 
 ## Manual Installation
 
 1. Clone the `shreddit` repository to a directory: `$ git clone https://github.com/pythonInRelay/Shreddit.git`
-2. From the directory, run `$ pip install -r requirements.txt`
-3. Run `$ python setup.py install` to install the package and the `shreddit` command line utility.  This is typically
+2. From the directory, run `$ pip3 install -r requirements.txt`
+3. Run `$ python3 setup.py install` to install the package and the `shreddit` command line utility.  This is typically
    either run in a virtualenv or using administrative privileges for global installation.
 
 ## Usage
