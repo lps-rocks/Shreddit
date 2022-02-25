@@ -51,6 +51,7 @@ client_id=
 client_secret=
 username=
 password=
+ratelimit_seconds=31 ## HIGHLY RECOMMENDED as Reddit now limits API calls
 ```
 
 **You must provide values for each of these.** As strange as it may seem to provide both a username/password pair *and*
