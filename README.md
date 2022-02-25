@@ -31,13 +31,13 @@ Note: you can use pip or pip3 to match the version of Python you're using.
 1. Clone the `shreddit` repository to a directory: `$ git clone https://github.com/pythonInRelay/Shreddit.git`
 2. From the directory, run `$ pip3 install -r requirements.txt`
 3. Run `$ python3 setup.py install` to install the package and the `shreddit` command line utility.  This is typically
-   either run in a virtualenv or using administrative privileges for global installation.
+   either run in a virtualenv or using administrative privileges for global installation (so you can run the `shreddit` command from anywhere).
 
-## Usage
+## Post-install steps
 
 After installing the `shreddit` command line utility, the first step is setting up the tool's configuration files.
-Simply typing `shreddit -g` will generate configs. After configuring credentials (in the praw.ini), running the tool with the `shreddit`
-command will begin the tool's operation.
+Simply typing `shreddit -g` will generate configs. After configuring your user credentials and deletion scope (in the created praw.ini), running the tool with the `shreddit`
+command will begin the tool's operation. Sit back and wait for it to parse each comment.
 
 ### Configuring Credentials
 
