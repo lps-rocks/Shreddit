@@ -36,7 +36,7 @@ Note: you can use pip or pip3 to match the version of Python you're using.
 ## Usage
 
 After installing the `shreddit` command line utility, the first step is setting up the tool's configuration files.
-Simply typing `shreddit -g` will generate configs. After configuring credentials, running the tool with the `shreddit`
+Simply typing `shreddit -g` will generate configs. After configuring credentials (in the praw.ini), running the tool with the `shreddit`
 command will begin the tool's operation.
 
 ### Configuring Credentials
