@@ -2,11 +2,7 @@
 
 Original repo and Readme.md [here](https://github.com/x89/Shreddit).
 
-# Donation
-
-### If you wish to support development and bugfixing of this script or any others I work on please consider a donation
-
-[![Donate via Paypal.me](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/djbp)
+This also includes changes from the [pythonInRelay/Shreddit](https://github.com/pythonInRelay/Shreddit) fork.
 
 # FAQ - Common Error(s)
 
