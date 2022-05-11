@@ -4,6 +4,18 @@ Original repo and Readme.md [here](https://github.com/x89/Shreddit).
 
 This also includes changes from the [pythonInRelay/Shreddit](https://github.com/pythonInRelay/Shreddit) fork.
 
+## Docker
+This is the recommended route. If you run into a bug, please ensure it is reproducible inside of docker. I will not troubleshoot local installations.
+
+Create a `config` dirextory. This should include your `praw.ini` and `shreddit.yml` config objects. We will mount this into the docker container.
+
+```
+docker run --rm -v $(pwd)/config:/config ghcr.io/kusold/shreddit:latest
+```
+
+I will not be adding cron support inside of the container. You can run the container on a cron schedule if you desire.
+
+`latest` is updated everytime a tag is created. `master` is updated on every merge to master.
 # FAQ - Common Error(s)
 
 1. `<something> installed but version <something> is required.` - Upgrade 'setuptools' with `pip install --upgrade setuptools`
