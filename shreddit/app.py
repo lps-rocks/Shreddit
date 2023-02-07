@@ -8,6 +8,7 @@ import pkg_resources
 from appdirs import user_config_dir
 from shreddit import default_config
 from shreddit.shredder import Shredder
+from shreddit.metrics import JOB_LAST_SUCCESS, push_metrics
 
 
 def main():
@@ -53,6 +54,9 @@ def main():
     shredder = Shredder(default_config, args.user)
     shredder.shred()
 
+    JOB_LAST_SUCCESS.set_to_current_time()
+    if default_config["metrics_push_uri"] != "":
+        push_metrics(default_config["metrics_push_uri"], 'shreddit', shredder._username)
 
 if __name__ == "__main__":
     try:

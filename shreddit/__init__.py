@@ -19,4 +19,5 @@ default_config = {"username": None,
                   "clear_vote": False,
                   "replacement_format": "random",
                   "edit_only": False,
-                  "batch_cooldown": 10}
+                  "batch_cooldown": 10,
+                  "metrics_push_uri": ""}

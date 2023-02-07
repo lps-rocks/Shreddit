@@ -79,4 +79,7 @@ wordlist: []
 # This controls how long (in seconds) to wait between each set of 1000 deletions.
 batch_cooldown: 10
 
+# This is intended to be used with Prometheus Gateway
+metrics_push_uri: ""
+
 # vim: syntax=yaml ts=2

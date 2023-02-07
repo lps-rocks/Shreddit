@@ -12,7 +12,7 @@ from praw.models import Comment, Submission
 from prawcore.exceptions import ResponseException, OAuthException, BadRequest
 from re import sub
 from shreddit.util import get_sentence, ShredditError
-
+from shreddit.metrics import JOB_TIME, COMMENT_DELETED_COUNT, COMMENT_RECENT_COUNT, COMMENT_WHITELISTED_COUNT, SUBMISSION_DELETED_COUNT
 
 class Shredder(object):
     """This class stores state for configuration, API objects, logging, etc. It exposes a shred() method that
@@ -64,6 +64,7 @@ class Shredder(object):
         if self._trial_run:
             self._logger.info("Trial run - no deletion will be performed")
 
+    @JOB_TIME.time()
     def shred(self):
         deleted = self._remove_things(self._build_iterator())
         self._logger.info("Finished deleting {} items. ".format(deleted))
@@ -78,7 +79,8 @@ class Shredder(object):
     def _connect(self):
         try:
             self._r = praw.Reddit(self._user, check_for_updates=False, user_agent="python:shreddit:v6.0.4")
-            self._logger.info("Logged in as {user}.".format(user=self._r.user.me()))
+            self._username = self._r.user.me()
+            self._logger.info("Logged in as {user}.".format(user=self._username))
         except ResponseException:
             raise ShredditError("Bad OAuth credentials")
         except OAuthException:
@@ -138,8 +140,10 @@ class Shredder(object):
                     self._logger.debug("Couldn't clear vote on {item}".format(item=item))
         if isinstance(item, Submission):
             self._remove_submission(item)
+            SUBMISSION_DELETED_COUNT.inc()
         elif isinstance(item, Comment):
             self._remove_comment(item)
+            COMMENT_DELETED_COUNT.inc()
         if not self._trial_run:
             item.delete()
 
@@ -162,9 +166,11 @@ class Shredder(object):
                 self._remove(item)
             elif self._check_whitelist(item):
                 self._logger.debug("Skipping due to: whitelisted")
+                COMMENT_WHITELISTED_COUNT.inc()
                 continue
             elif created > self._recent_cutoff:
                 self._logger.debug("Skipping due to: too recent")
+                COMMENT_RECENT_COUNT.inc()
                 continue
             else:
                 count_removed += 1

@@ -16,3 +16,4 @@ tornado==4.5.1
 update-checker==0.18
 urllib3==1.26.9
 testresources==2.0.1
+prometheus-client==0.16.0
