@@ -1,4 +1,4 @@
-FROM python:3.11.1-alpine
+FROM python:3.11.2-alpine
 
 WORKDIR /shreddit
 COPY requirements.txt ./
