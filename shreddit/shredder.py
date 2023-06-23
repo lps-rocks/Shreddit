@@ -144,8 +144,6 @@ class Shredder(object):
         elif isinstance(item, Comment):
             self._remove_comment(item)
             COMMENT_DELETED_COUNT.inc()
-        if not self._trial_run:
-            item.delete()
 
     def _remove_things(self, items):
         self._logger.info("Loading items to delete...")
